@@ -1,0 +1,16 @@
+<h2>Your Feedback</h2>
+<form action="/feedback/add" method="POST">
+  <textarea name="feedbackText" required></textarea>
+  <button type="submit">Submit Feedback</button>
+</form>
+
+<ul>
+  <% feedbacks.forEach(f => { %>
+    <li>
+      <%= f.feedbackText %> |
+      <a href="/feedback/edit/<%= f._id %>">Edit</a> |
+      <a href="/feedback/delete/<%= f._id %>">Delete</a>
+    </li>
+  <% }) %>
+</ul>
+<a href="/logout">Logout</a>

@@ -1,0 +1,5 @@
+<h2>Edit Feedback</h2>
+<form action="/feedback/edit/<%= feedback._id %>" method="POST">
+  <textarea name="feedbackText" required><%= feedback.feedbackText %></textarea>
+  <button type="submit">Update</button>
+</form>
